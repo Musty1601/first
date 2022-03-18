@@ -154,7 +154,7 @@ nav.stickadd .hamburger{
 header{
     height: 100vh;
     width: 100%;
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/DMAT5641.JPG);
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/m1.JPG);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -287,6 +287,11 @@ header{
 
 .form-row{
     display: flex;
+}
+
+.contact .form-group{
+    padding: 5px;
+    text-align: end;
 }
 
 
