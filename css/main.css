@@ -31,10 +31,9 @@ p{
     color: #fff !important;
 }
 
-
 /* preloader */
 
-.preloader{
+/*.preloader{
     position: fixed;
     top: 0;
     left: 0;
@@ -42,7 +41,7 @@ p{
     height: 100%;
     background-color: #000;
     z-index: 99998;
-}
+}*/
 .preloader::before{
     content: "";
     position: absolute;
@@ -99,62 +98,65 @@ p{
 }
 
 /* navigation */
-
-nav.r-nav{
+nav{
     background: transparent;
-    padding: 20px 0;
-    transition:.5s all ;
+    width: 100%;
+}
+nav .contain{
+    width: 86%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .contain .navbar-brand{
+    color: #fff;
+    font-size: 2rem;
 }
 
-nav .navbar-brand{
-    font-size: 30px;
-    color: #fff;
+nav .contain #shownav, nav .contain #togglenav{
+    display: none;
 }
-
-
-
-nav .navbar-nav li a{
-    color: #fff;
+nav .contain ul a{
+    text-decoration: none;
+    color: #fcf8f9;
     font-size: 16px;
-    font-family: Nunito;
-    letter-spacing: 0,05em;
-    font-weight: 600;
+    letter-spacing: 0.05em;
+    font-family: "nunito" sans-serif;
 }
-
-nav .navbar-nav li{
-    margin-left: 15px;
+nav .contain li{
+    list-style: none;
 }
-
-nav.r-nav.stickyadd{
+nav .contain ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+nav.stickyadd {
     background: #fff !important;
     padding: 15px 0;
-    box-shadow: 0 1px 8px 3px rgba(0, 0,0,0.05);
-    transition: .5s all ease-in-out;
+    box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.05);
+    transition: 0.5s all ease-in-out;
 }
-
-nav.stickyadd .navbar-brand{
+nav.stickyadd .navbar-brand {
     color: #000;
-    font-size: 40px;
-    transition: .5s all;
+    font-size: 30px;
+    transition: 0.5s all;
 }
-
-nav.stickyadd .navbar-nav .nav-link{
-    color: #000 !important;
+nav.stickyadd ul a {
+    color: #000;
 }
-
-.navbar .hamburger{
-    color: #fff;
-}
-
-nav.stickadd .hamburger{
+  
+nav.stickyadd .hamburger {
     color: #000;
 }
 
 /* header section */
 header{
-    height: 100vh;
+    height:100vh;
     width: 100%;
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/m1.JPG);
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/w1.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -236,6 +238,8 @@ header{
 /* service section */
 .card,.card-header{
     background: #F8F9FA !important;
+    margin-bottom: 0.4rem;
+    
 }
 
 .card-header{
@@ -251,7 +255,12 @@ header{
     width: 40px;
     margin: 15px auto;
     background: #e65f78;
+    transition: 0.5s all;
 }
+.services-class h5:hover + .service-border {
+    width: 100px;
+}
+
 
 /* testimony*/
 .testimony-class .text-item{
@@ -290,7 +299,7 @@ header{
 }
 
 .contact .form-group{
-    padding: 5px;
+    padding: 10px;
     text-align: end;
 }
 
@@ -313,4 +322,39 @@ footer .r-icon a:hover{
     border: 1px solid #eee;
     color: #eee;
     transition: .5s all;
+}
+
+@media screen and (max-width: 768px) {
+    nav .contain{
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    nav .contain #togglenav{
+        display: inline-block;
+        color: #fff;
+        font-size: 2rem;
+        margin-right: 1rem;
+        cursor: pointer;  
+    }
+    nav .contain #shownav:checked ~ ul{
+        display: block;
+    }
+    nav .contain ul{
+        display: none;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+    }
+
+    nav .contain ul li{
+        padding: 0.2rem 0;
+        background-color: #fdfbfb;
+        transition: all 300ms ease;
+        display: inline;
+    }
+    nav .contain ul li a{
+        color: #000;
+        font-size: 20px;
+    }
 }
