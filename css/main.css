@@ -49,7 +49,7 @@ p{
     width: 100%;
     height: 50%;
     background: #000;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .preloader::after{
@@ -59,7 +59,7 @@ p{
     width: 100%;
     height: 50%;
     background: #000;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .preloader.complete:before{
@@ -150,6 +150,10 @@ nav.stickyadd ul a {
   
 nav.stickyadd .hamburger {
     color: #000;
+}
+nav *,
+header * {
+  animation-delay: 0.5s;
 }
 
 /* header section */

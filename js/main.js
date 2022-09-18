@@ -77,4 +77,18 @@ $(document).ready(function(){
     $('a').smoothScroll({
       speed:2000,
     });
-});   
+}); 
+
+function sendEmail(){
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "afolabimustopha3@gmail.com",
+    Password : "33FF90631A9D87296C0917F2D115DA6DF086",
+    To : 'afolabimustopha3@gmail.com',
+    From : "afolabimustopha3@gmail.com",
+    Subject : "This is the form email",
+    Body : "And this is the user"
+}).then(
+  message => alert(message)
+);
+} 
